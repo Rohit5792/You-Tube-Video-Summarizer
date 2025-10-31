@@ -1,7 +1,8 @@
 import validators,streamlit as st
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
-from langchain.chains import load_summarize_chain
+from langchain.chains.summarize.chain import load_summarize_chain
+
 
 from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLoader
 
@@ -56,4 +57,5 @@ if st.button("Summarize the Content from YT or Website"):
             st.exception(f"Exception:{e}")
 
                     
+
 
